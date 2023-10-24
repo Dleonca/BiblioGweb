@@ -10,6 +10,7 @@ const Inicio = () => {
       <Navbar expand="lg" className="bg-whiteOpa">
         <Container fluid>
           <Navbar.Brand href="#" className="logotipo">BiblioG</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="navbarScroll" className="justify-content-end">
             <Button variant="outline-success" className="me-2">INICIAR SESION</Button>
             <Button variant="outline-danger" className="me-2">REGISTRATE</Button>
