@@ -16,7 +16,10 @@
    font-weight: 900;
    font-style: italic;
    color: #fff;
+   text-decoration: none;
+   font-size: larger;
 }
+
 .titleItems{
    font-family: 'Roboto', sans-serif;
 }
@@ -63,4 +66,58 @@
    text-align: center;
    margin: 20px;
    font-family: 'Vollkorn', serif;
+}
+.btn{
+   font-family: 'Roboto', sans-serif;
+}
+.btn-primary{
+   background-color:#095FFF;
+}
+.catalogoLibros{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.filtro{
+   background-color: #09C7FF;
+   height: 40px;
+}
+.libros{
+   padding: 10px 15px;
+   background-color: #fff;
+   justify-content: center;
+}
+.libros, .filtro{
+   width: 90%;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding: 10px 15px;
+}
+.tarjeta{
+   width: 18rem;
+   height: fit-content;
+   padding: 8px 0;
+   display: flex;
+   align-items: center;
+   border: 1px solid #095FFF;
+}
+.cardCT{
+   height: 36px;
+   margin: 0;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 500;
+}
+.cardCI{
+   height: 320px;
+   width: 16rem;
+}
+.cardCB{
+   width: 14rem;
+   border-radius: 0;
+   background-color:  #095FFF;
+   margin: 4px 0;
+   border-radius: 15px;
 }
