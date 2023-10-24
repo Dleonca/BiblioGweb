@@ -55,3 +55,12 @@
 .navbar-toggler{
    background-color: #fff;
 }
+.mainInicio{
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+   color: #fff;
+   text-align: center;
+   margin: 20px;
+   font-family: 'Vollkorn', serif;
+}
