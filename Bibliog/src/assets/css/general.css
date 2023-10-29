@@ -82,19 +82,24 @@
 }
 .filtro{
    background-color: #09C7FF;
-   height: 40px;
+   height: 50px;
+   padding: 8px;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+
 }
 .libros{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
    padding: 10px 15px;
    background-color: #fff;
    justify-content: center;
 }
 .libros, .filtro{
    width: 90%;
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   padding: 10px 15px;
+   
 }
 .tarjeta{
    width: 18rem;
@@ -105,19 +110,30 @@
    border: 1px solid #095FFF;
 }
 .cardCT{
+   width: 90%;
    height: 36px;
    margin: 0;
    font-family: 'Roboto', sans-serif;
    font-weight: 500;
+   text-align: center;
 }
 .cardCI{
    height: 320px;
-   width: 16rem;
+   width: 90%;
 }
 .cardCB{
-   width: 14rem;
+   width: 90%;
    border-radius: 0;
    background-color:  #095FFF;
    margin: 4px 0;
    border-radius: 15px;
+}
+#filtroBusqueda{
+   width: 200px;
+   margin-right: 4px;
+}
+.search{
+   background: url(../images/search.png) transparent no-repeat ;
+   background-size: 20px;
+   background-position: center;
 }
