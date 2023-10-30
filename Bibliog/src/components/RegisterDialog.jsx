@@ -3,15 +3,21 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import "../assets/css/general.css";
+import { useNavigate } from 'react-router-dom';
 
 const RegisterDialog = ({ show, handleClose }) => {
+    const navigate = useNavigate();
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
+        navigate('/HomeUser');
+    }
     return (
         <Modal show={show} onHide={handleClose} centered dialogClassName="my-modal" >
             <Modal.Header closeButton>
                 <Modal.Title className="Dtitle ms-auto" >Regístrate en BiblioG</Modal.Title>
             </Modal.Header>
             <Modal.Body className="DmodalBody">
-                <div className="DformContainer">
+                <Form className="DformContainer" onSubmit={handleFormSubmit}>
                     <div className="DformRow">
                         <Form.Group controlId="formBasicName" className="DformGroup">
                             <Form.Label>Nombres</Form.Label>
@@ -58,7 +64,7 @@ const RegisterDialog = ({ show, handleClose }) => {
                             Regístrate
                         </Button>
                     </div>
-                </div>
+                </Form>
             </Modal.Body>
         </Modal>
     );

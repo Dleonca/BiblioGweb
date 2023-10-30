@@ -17,7 +17,7 @@
 .logotipoNegro {
    color: black;
 }
-.logotipo {
+.logotipo, .logotipoNegro {
    font-family: 'Vollkorn', serif;
    font-weight: 900;
    font-style: italic;
