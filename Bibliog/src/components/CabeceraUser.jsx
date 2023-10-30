@@ -3,10 +3,9 @@ import "../assets/css/general.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { useNavigate } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
+
 const CabeceraUser = () => {
   const navigate = useNavigate();
   const handleFormSubmit = (event) => {
@@ -21,8 +20,8 @@ const CabeceraUser = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="navbarScroll" className="justify-content-end">
-          <NavLink  to='HomeUser/Catalogo' className="me-4">Catalogo</NavLink >
-          <Nav.Link href="#" className="me-4">Pretados</Nav.Link>
+          <NavLink to='Catalogo' className="me-4">Catalogo</NavLink >
+          <NavLink to='PrestamosUser' className="me-4">Pretamos</NavLink>
           <NavDropdown title="Maria Ankge" id="basic-nav-dropdown" className="me-5">
             <NavDropdown.Item href="#">Cuenta</NavDropdown.Item>
             <NavDropdown.Item href="#" onClick={handleFormSubmit}>

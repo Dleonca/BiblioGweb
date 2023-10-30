@@ -10,8 +10,8 @@ function HomeUser() {
     <div>
      <CabeceraUser />
      <Routes>
-        <Route path="HomeUser/Catalogo" element={<Catalogo />}  />
-        <Route path="HomeUser/PrestamosUser" element={<PrestamosUser />} />
+        <Route path="Catalogo" element={<Catalogo />}  />
+        <Route path="PrestamosUser" element={<PrestamosUser />} />
       </Routes>
     </div>
   );

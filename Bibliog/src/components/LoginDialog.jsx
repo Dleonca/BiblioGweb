@@ -3,8 +3,14 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import "../assets/css/general.css";
+import { useNavigate } from 'react-router-dom';
 
 const LoginDialog = ({ show, handleClose }) => {
+    const navigate = useNavigate();
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
+        navigate('Home');
+    }
     return (
       <Modal show={show} onHide={handleClose} centered>
         <Modal.Header closeButton>
@@ -26,7 +32,7 @@ const LoginDialog = ({ show, handleClose }) => {
               <a href="#">¿Olvidaste tu contraseña?</a>
             </p>
   
-            <Button variant="primary" type="submit" className="button" style={{ width: '100%' }}>
+            <Button variant="primary" type="submit" className="button" style={{ width: '100%' }} onClick={handleFormSubmit}>
               Iniciar sesión
             </Button>
           </div>
