@@ -1,17 +1,18 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.bg-whiteOpa{
-   background-color: rgba(0, 0, 0, 70%); 
+.bg-whiteOpa {
+   background-color: rgba(0, 0, 0, 70%);
 }
-.img-body{
+
+.img-body {
    background: url(../images/Portada.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh;
+   background-size: cover;
+   background-repeat: no-repeat;
+   width: 100%;
+   height: 100vh;
 }
-.logotipo{
+
+.logotipo {
    font-family: 'Vollkorn', serif;
    font-weight: 900;
    font-style: italic;
@@ -20,45 +21,49 @@
    font-size: larger;
 }
 
-.titleItems{
+.titleItems {
    font-family: 'Roboto', sans-serif;
 }
-.btn-outline-success{
---bs-btn-color: #095FFF;
---bs-btn-border-color: #095FFF;
---bs-btn-hover-color: #fff;
---bs-btn-hover-bg: #095FFF;
---bs-btn-hover-border-color: #095FFF;
---bs-btn-focus-shadow-rgb: 25,135,84;
---bs-btn-active-color: #fff;
---bs-btn-active-bg: #095FFF;
---bs-btn-active-border-color: #095FFF;
---bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
---bs-btn-disabled-color: #095FFF;
---bs-btn-disabled-bg: transparent;
---bs-btn-disabled-border-color: #095FFF;
---bs-gradient: none;
+
+.btn-outline-success {
+   --bs-btn-color: #095FFF;
+   --bs-btn-border-color: #095FFF;
+   --bs-btn-hover-color: #fff;
+   --bs-btn-hover-bg: #095FFF;
+   --bs-btn-hover-border-color: #095FFF;
+   --bs-btn-focus-shadow-rgb: 25, 135, 84;
+   --bs-btn-active-color: #fff;
+   --bs-btn-active-bg: #095FFF;
+   --bs-btn-active-border-color: #095FFF;
+   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+   --bs-btn-disabled-color: #095FFF;
+   --bs-btn-disabled-bg: transparent;
+   --bs-btn-disabled-border-color: #095FFF;
+   --bs-gradient: none;
 }
+
 .btn-outline-danger {
---bs-btn-color: #FF6309;
---bs-btn-border-color: #FF6309;
---bs-btn-hover-color: #fff;
---bs-btn-hover-bg: #FF6309;
---bs-btn-hover-border-color: #FF6309;
---bs-btn-focus-shadow-rgb: 220,53,69;
---bs-btn-active-color: #fff;
---bs-btn-active-bg: #FF6309;
---bs-btn-active-border-color: #FF6309;
---bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
---bs-btn-disabled-color: #FF6309;
---bs-btn-disabled-bg: transparent;
---bs-btn-disabled-border-color: #FF6309;
---bs-gradient: none;
+   --bs-btn-color: #FF6309;
+   --bs-btn-border-color: #FF6309;
+   --bs-btn-hover-color: #fff;
+   --bs-btn-hover-bg: #FF6309;
+   --bs-btn-hover-border-color: #FF6309;
+   --bs-btn-focus-shadow-rgb: 220, 53, 69;
+   --bs-btn-active-color: #fff;
+   --bs-btn-active-bg: #FF6309;
+   --bs-btn-active-border-color: #FF6309;
+   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+   --bs-btn-disabled-color: #FF6309;
+   --bs-btn-disabled-bg: transparent;
+   --bs-btn-disabled-border-color: #FF6309;
+   --bs-gradient: none;
 }
-.navbar-toggler{
+
+.navbar-toggler {
    background-color: #fff;
 }
-.mainInicio{
+
+.mainInicio {
    align-items: center;
    display: flex;
    flex-direction: column;
@@ -67,36 +72,44 @@
    margin: 20px;
    font-family: 'Vollkorn', serif;
 }
-.btn{
+
+.btn {
    font-family: 'Roboto', sans-serif;
 }
-.btn-primary{
-   background-color:#095FFF;
+
+.btn-primary {
+   background-color: #095FFF;
 }
-.catalogoLibros{
+
+.catalogoLibros {
    width: 100%;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
 }
-.filtro{
+
+.filtro {
    background-color: #09C7FF;
    height: 40px;
 }
-.libros{
+
+.libros {
    padding: 10px 15px;
    background-color: #fff;
    justify-content: center;
 }
-.libros, .filtro{
+
+.libros,
+.filtro {
    width: 90%;
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
    padding: 10px 15px;
 }
-.tarjeta{
+
+.tarjeta {
    width: 18rem;
    height: fit-content;
    padding: 8px 0;
@@ -104,20 +117,117 @@
    align-items: center;
    border: 1px solid #095FFF;
 }
-.cardCT{
+
+.cardCT {
    height: 36px;
    margin: 0;
    font-family: 'Roboto', sans-serif;
    font-weight: 500;
 }
-.cardCI{
+
+.cardCI {
    height: 320px;
    width: 16rem;
 }
-.cardCB{
+
+.cardCB {
    width: 14rem;
    border-radius: 0;
-   background-color:  #095FFF;
+   background-color: #095FFF;
    margin: 4px 0;
    border-radius: 15px;
+}
+
+/* Estilos dialogos login */
+
+.center {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.title {
+   text-align: center;
+   font-family: 'Roboto', sans-serif;
+}
+
+.input {
+   margin-bottom: 10px;
+   padding: 8px;
+   width: 100%;
+   box-sizing: border-box;
+   border: 1px solid #09C7FF;
+   font-family: 'Roboto', sans-serif;
+}
+
+.forgotPassword {
+   text-align: center;
+   margin-top: 10px;
+   font-family: 'Roboto', sans-serif;
+}
+
+.button {
+   margin-top: 20px;
+   background-color: #09C7FF;
+   border: none;
+   border-radius: 5px;
+   padding: 10px 20px;
+   font-family: 'Roboto', sans-serif;
+}
+
+.modalBody {
+   padding-top: 20px;
+}
+
+/* Estilos de dialogo registrar */
+
+.DformContainer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.DformRow {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 20px;
+   width: 100%;
+}
+
+.DformGroup {
+   width: 45%;
+}
+
+.Dtitle {
+   text-align: center;
+   font-family: 'Roboto', sans-serif;
+}
+
+.Dinput {
+   padding: 8px;
+   width: 100%;
+   box-sizing: border-box;
+   border: 1px solid #09C7FF;
+   font-family: 'Roboto', sans-serif;
+}
+
+.Dbutton {
+   margin-top: 20px;
+   background-color: #09C7FF;
+   border: none;
+   border-radius: 5px;
+   padding: 10px 20px;
+   width: 45%;
+   font-family: 'Roboto', sans-serif;
+   /* Ajusta el ancho del botón al mismo ancho que los campos de texto */
+}
+
+.DmodalBody {
+   padding-top: 20px;
+}
+
+.my-modal {
+   width: 50vw;
+   /* Occupy the 90% of the screen width */
+   max-width: 50vw;
 }
