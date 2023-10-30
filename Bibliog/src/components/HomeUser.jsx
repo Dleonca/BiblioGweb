@@ -1,11 +1,18 @@
 import React from "react";
 import CabeceraUser from "./CabeceraUser";
+import Catalogo from "./Catalogo";
+import PrestamosUser from "./PrestamosUser";
+import { Routes, Route } from "react-router-dom";
 import "../assets/css/general.css";
+
 function HomeUser() {
   return (
     <div>
-      <CabeceraUser />
-      <h1>Welcome User</h1>
+     <CabeceraUser />
+     <Routes>
+        <Route path="Catalogo" element={<Catalogo />}  />
+        <Route path="PrestamosUser" element={<PrestamosUser />} />
+      </Routes>
     </div>
   );
 }

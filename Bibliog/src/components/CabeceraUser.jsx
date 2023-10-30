@@ -6,6 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const CabeceraUser = () => {
   const navigate = useNavigate();
   const handleFormSubmit = (event) => {
@@ -20,7 +21,7 @@ const CabeceraUser = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="navbarScroll" className="justify-content-end">
-          <Nav.Link href="#" className="me-4">Catalogo</Nav.Link>
+          <NavLink  to='/HomeUser/Catalogo' className="me-4">Catalogo</NavLink >
           <Nav.Link href="#" className="me-4">Pretados</Nav.Link>
           <NavDropdown title="Maria Ankge" id="basic-nav-dropdown" className="me-5">
             <NavDropdown.Item href="#">Cuenta</NavDropdown.Item>
