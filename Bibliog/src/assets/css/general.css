@@ -11,12 +11,16 @@
    width: 100%;
    height: 100vh;
 }
-
+.logotipo{
+   background-color: #fff;
+}
+.logotipoNegro {
+   background-color: black;
+}
 .logotipo {
    font-family: 'Vollkorn', serif;
    font-weight: 900;
    font-style: italic;
-   color: #fff;
    text-decoration: none;
    font-size: larger;
 }
@@ -106,8 +110,7 @@
 
 .libros,
 .filtro {
-   width: 90%;
-   
+   width: 100%;
 }
 
 .tarjeta {
@@ -117,6 +120,7 @@
    display: flex;
    align-items: center;
    border: 1px solid #095FFF;
+   margin: 4px;
 }
 .cardCT{
    height: 36px;
@@ -131,7 +135,7 @@
    width: 90%;
 }
 .cardCB{
-   width: 14rem;
+   width: 90%;
    border-radius: 0;
    background-color: #095FFF;
    margin: 4px 0;
