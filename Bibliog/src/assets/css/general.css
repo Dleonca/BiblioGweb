@@ -115,7 +115,14 @@
 .filtro {
    width: 100%;
 }
-
+#filtroBusqueda{
+   width: 200px;
+}
+.search{
+   background: url(../images/search.png) transparent no-repeat;
+   background-size: 20px;
+   background-position: center;
+}
 .tarjeta {
    width: 18rem;
    height: fit-content;
@@ -126,7 +133,6 @@
    margin: 4px;
 }
 .cardCT{
-   height: 36px;
    margin: 0;
    font-family: 'Roboto', sans-serif;
    font-weight: 500;
