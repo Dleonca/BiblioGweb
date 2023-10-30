@@ -18,6 +18,48 @@ const Catalogo = () => {
             Ver más
           </Button>
         </Card>
+        <Card className="tarjeta">
+          <Card.Title className="cardCT">Cada historia cuenta</Card.Title>
+          <Card.Img className="cardCI" variant="top" src={Libro} />
+          <Button className="cardCB" variant="primary">
+            Ver más
+          </Button>
+        </Card>
+        <Card className="tarjeta">
+          <Card.Title className="cardCT">Cada historia cuenta</Card.Title>
+          <Card.Img className="cardCI" variant="top" src={Libro} />
+          <Button className="cardCB" variant="primary">
+            Ver más
+          </Button>
+        </Card>
+        <Card className="tarjeta">
+          <Card.Title className="cardCT">Cada historia cuenta</Card.Title>
+          <Card.Img className="cardCI" variant="top" src={Libro} />
+          <Button className="cardCB" variant="primary">
+            Ver más
+          </Button>
+        </Card>
+        <Card className="tarjeta">
+          <Card.Title className="cardCT">Cada historia cuenta</Card.Title>
+          <Card.Img className="cardCI" variant="top" src={Libro} />
+          <Button className="cardCB" variant="primary">
+            Ver más
+          </Button>
+        </Card>
+        <Card className="tarjeta">
+          <Card.Title className="cardCT">Cada historia cuenta</Card.Title>
+          <Card.Img className="cardCI" variant="top" src={Libro} />
+          <Button className="cardCB" variant="primary">
+            Ver más
+          </Button>
+        </Card>
+        <Card className="tarjeta">
+          <Card.Title className="cardCT">Cada historia cuenta</Card.Title>
+          <Card.Img className="cardCI" variant="top" src={Libro} />
+          <Button className="cardCB" variant="primary">
+            Ver más
+          </Button>
+        </Card>
       </div>
     </div>
   );
