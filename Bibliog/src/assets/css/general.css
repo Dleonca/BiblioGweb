@@ -12,10 +12,10 @@
    height: 100vh;
 }
 .logotipo{
-   background-color: #fff;
+   color: #fff;
 }
 .logotipoNegro {
-   background-color: black;
+   color: black;
 }
 .logotipo {
    font-family: 'Vollkorn', serif;
@@ -103,6 +103,9 @@
 
 }
 .libros{
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
    padding: 10px 15px;
    background-color: #fff;
    justify-content: center;
