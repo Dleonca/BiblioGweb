@@ -9,7 +9,7 @@ const RegisterDialog = ({ show, handleClose }) => {
     const navigate = useNavigate();
     const handleFormSubmit = (event) => {
         event.preventDefault();
-        navigate('/HomeUser');
+        navigate('HomeUser');
     }
     return (
         <Modal show={show} onHide={handleClose} centered dialogClassName="my-modal" >
@@ -17,7 +17,7 @@ const RegisterDialog = ({ show, handleClose }) => {
                 <Modal.Title className="Dtitle ms-auto" >Regístrate en BiblioG</Modal.Title>
             </Modal.Header>
             <Modal.Body className="DmodalBody">
-                <Form className="DformContainer" onSubmit={handleFormSubmit}>
+                <Form className="DformContainer" >
                     <div className="DformRow">
                         <Form.Group controlId="formBasicName" className="DformGroup">
                             <Form.Label>Nombres</Form.Label>
@@ -60,7 +60,7 @@ const RegisterDialog = ({ show, handleClose }) => {
                             <Form.Control type="text" placeholder="Ingresa tu número de teléfono o celular" className="Dinput" />
                         </Form.Group>
 
-                        <Button variant="primary" type="submit" className="Dbutton">
+                        <Button variant="primary" type="submit" className="Dbutton" onClick={handleFormSubmit}>
                             Regístrate
                         </Button>
                     </div>

@@ -1,10 +1,13 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Cabecera from "./Cabecera";
 import { NavLink } from "react-router-dom";
 import "../assets/css/general.css";
 
 const Inicio = () => {
   return (
+    <div className="img-body">
+      <Cabecera />
     <main className="mainInicio">
       <h1 className="fw-bold">¿QUE VAS A LEER HOY?</h1>
       <p className="fs-2">
@@ -18,6 +21,7 @@ const Inicio = () => {
         Explora Nuestro Catalogo
       </NavLink>
     </main>
+    </div>
   );
 };
 
