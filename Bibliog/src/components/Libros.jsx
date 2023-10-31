@@ -8,6 +8,10 @@ const Libros = () => {
   return (
     <div className="m-5">
       <div className="row">
+        <h4 className="titleItemsII">Crear Nuevo Libro</h4>
+        <hr />
+      </div>
+      <div className="row">
         <Form className="d-flex justify-content-end">
           <div className="col-3">
             <Form.Group
@@ -95,7 +99,9 @@ const Libros = () => {
           </div>
         </Form>
       </div>
+      <hr />
       <br />
+    
       <div className="row">
         <div className="col-12">
           <Form className="d-flex justify-content-end">
