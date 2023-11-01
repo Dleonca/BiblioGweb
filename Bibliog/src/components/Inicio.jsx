@@ -17,7 +17,7 @@ const Inicio = () => {
       <p className="fs-2">
         !Prestar libros nunca ha sido tan fácil como con Bibliog!.
       </p>
-      <NavLink className="btn btn-primary" to="/Catalogo">
+      <NavLink className="btn btn-primary" to="Catalogo">
         Explora Nuestro Catalogo
       </NavLink>
     </main>
