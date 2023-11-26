@@ -11,6 +11,7 @@ const Home = () => {
     <div>
      <CabeceraAdmin />
      <Routes>
+        <Route path="" element={<Catalogo />}  />
         <Route path="Catalogo" element={<Catalogo />}  />
         <Route path="Libros" element={<Libros />}  />
         <Route path="PrestamosAdmin" element={<PrestamosAdmin />}  />

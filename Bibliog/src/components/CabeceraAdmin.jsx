@@ -19,9 +19,9 @@ const CabeceraAdmin = () => {
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="navbarScroll" className="justify-content-end">
-        <NavLink to='Catalogo' className="me-4 irA">Catalogo</NavLink >
-        <NavLink to='Libros' className="me-4 irA">Libros</NavLink>
-        <NavLink to='PrestamosAdmin' className="me-4 irA">Pretamos</NavLink>
+        <NavLink to='/Home/Catalogo' className="me-4 irA">Catalogo</NavLink >
+        <NavLink to='/Home/Libros' className="me-4 irA">Libros</NavLink>
+        <NavLink to='/Home/PrestamosAdmin' className="me-4 irA">Pretamos</NavLink>
         <NavDropdown title="Administrador" id="basic-nav-dropdown" className="me-5 irA">
           <NavDropdown.Item href="#">Cuenta</NavDropdown.Item>
           <NavDropdown.Item href="#" onClick={handleFormSubmit}>

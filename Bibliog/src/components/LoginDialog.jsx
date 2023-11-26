@@ -50,6 +50,7 @@ const LoginDialog = ({ show, handleClose }) => {
       const usuariolog = responseData.data;
       if (responseData.data && Object.keys(responseData.data).length > 0) {
         alert(`¡Usuario ${usuariolog.correo}, Existe!`);
+        limpiarCampos();
         if(usuariolog.rol == 'usuario'){
           navigate('HomeUser');
         }else{

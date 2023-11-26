@@ -10,6 +10,7 @@ function HomeUser() {
     <div>
      <CabeceraUser />
      <Routes>
+        <Route path="" element={<Catalogo />} />
         <Route path="Catalogo" element={<Catalogo />}  />
         <Route path="PrestamosUser" element={<PrestamosUser />} />
       </Routes>

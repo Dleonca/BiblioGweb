@@ -6,12 +6,13 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { useNavigate, NavLink } from "react-router-dom";
 
-const CabeceraUser = () => {
+const CabeceraUser =() => {
   const navigate = useNavigate();
   const handleFormSubmit = (event) => {
     event.preventDefault();
     navigate("/");
   };
+ 
   return (
     <Navbar expand="lg" className=" bordeNav bg-white">
       <Container fluid>
@@ -20,9 +21,9 @@ const CabeceraUser = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="navbarScroll" className="justify-content-end">
-          <NavLink to='Catalogo' className="me-4 irA">Catalogo</NavLink >
-          <NavLink to='PrestamosUser' className="me-4 irA">Pretamos</NavLink>
-          <NavDropdown title="Maria Ankge" id="basic-nav-dropdown" className="me-5 irA">
+          <NavLink to='/HomeUser/Catalogo' className="me-4 irA">Catalogo</NavLink >
+          <NavLink to='/HomeUser/PrestamosUser' className="me-4 irA">Pretamos</NavLink>
+          <NavDropdown  name="nombre" title='user'/*{usuariolog ? usuariolog.nombre : 'Usuario'}*/ id="basic-nav-dropdown" className="me-5 irA">
             <NavDropdown.Item href="#">Cuenta</NavDropdown.Item>
             <NavDropdown.Item href="#" onClick={handleFormSubmit}>
               Cerrar Sesion
