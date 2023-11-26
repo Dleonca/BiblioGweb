@@ -252,3 +252,15 @@
    /* Occupy the 90% of the screen width */
    max-width: 50vw;
 }
+.pointer {
+   cursor: pointer;
+ }
+.pwd-icon {
+   color: #09C7FF;
+   bottom: 25%;
+   right: 5%;
+   top: 144px;
+ }
+ .pwd-icon:hover {
+   filter: brightness(1.2);
+ }
