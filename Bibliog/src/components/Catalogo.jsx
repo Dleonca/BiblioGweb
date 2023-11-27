@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+//import Form from "react-bootstrap/Form";
 import Card from "react-bootstrap/Card";
-import Libro from "../assets/images/libro.jpg";
-
+//import Libro from "../assets/images/libro.jpg";
+import LibroDialog from './LibroDialog';
 const Catalogo = () => {
+  const [showLibroDialog, setShowLoginDialog] = useState(false);
+
+  const handleShowLD= () => setShowLoginDialog(true);
+  const handleCloseLD = () => setShowLoginDialog(false);
+
   const [verlibros, setVerlibros] = useState([]);
 
   useEffect(() => {
@@ -21,6 +26,7 @@ const Catalogo = () => {
         });
         const data = await response.json();
         setVerlibros(data.data);
+        console.log(verlibros)
       } catch (error) {
         console.error('Error al obtener datos:', error);
       }
@@ -39,13 +45,14 @@ const Catalogo = () => {
           <Card className="tarjeta">
             <Card.Title className="cardCT">{libro.titulo}</Card.Title>
             <Card.Img className="cardCI" variant="top" src={libro.imagen} />
-            <Button className="cardCB" variant="primary">
+            <Button className="cardCB" variant="primary" onClick={handleShowLD}>
               Ver más
             </Button>
 
           </Card>
         ))}
       </div>
+      <LibroDialog show={showLibroDialog} handleClose={handleCloseLD} libro={verlibros}/>
     </div>
   );
 };
