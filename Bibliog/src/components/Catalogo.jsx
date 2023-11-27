@@ -6,9 +6,17 @@ import Card from "react-bootstrap/Card";
 import LibroDialog from './LibroDialog';
 const Catalogo = () => {
   const [showLibroDialog, setShowLoginDialog] = useState(false);
+  const [selectedLibroId, setSelectedLibroId] = useState(null); // Nuevo estado para almacenar la id_libro seleccionada
 
-  const handleShowLD= () => setShowLoginDialog(true);
-  const handleCloseLD = () => setShowLoginDialog(false);
+  const handleShowLD = (idLibro) => {
+    setSelectedLibroId(idLibro); // Almacena la id_libro seleccionada
+    console.log(idLibro); // Imprimir la id_libro seleccionada
+    setShowLoginDialog(true);
+  };
+  const handleCloseLD = () => {
+    setSelectedLibroId(null); // Limpia la id_libro al cerrar el diálogo
+    setShowLoginDialog(false);
+  };
 
   const [verlibros, setVerlibros] = useState([]);
 
@@ -42,17 +50,19 @@ const Catalogo = () => {
       </div>
       <div className="libros">
         {verlibros.map((libro) => (
-          <Card className="tarjeta">
+          <Card className="tarjeta" key={libro.id_libro}>
             <Card.Title className="cardCT">{libro.titulo}</Card.Title>
             <Card.Img className="cardCI" variant="top" src={libro.imagen} />
-            <Button className="cardCB" variant="primary" onClick={handleShowLD}>
+            <Button className="cardCB" variant="primary" onClick={() => handleShowLD(libro.id_libro)}>
               Ver más
             </Button>
 
           </Card>
         ))}
       </div>
-      <LibroDialog show={showLibroDialog} handleClose={handleCloseLD} libro={verlibros}/>
+      {showLibroDialog && (
+        <LibroDialog show={showLibroDialog} handleClose={handleCloseLD} selectedLibroId={selectedLibroId} />
+      )}
     </div>
   );
 };
