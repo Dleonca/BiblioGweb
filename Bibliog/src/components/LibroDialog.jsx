@@ -9,7 +9,9 @@ const LibroDialog = ({ show, handleClose, selectedLibroId }) => {
     const [showPwd, setShowPwd] = useState(false)
     console.log(selectedLibroId)
     const [libroDetails, setLibroDetails] = useState(null);
-    const [reservaEstado, setReservaEstado] = useState(null);
+    const [reservaEstado, setReservaEstado] = useState('enviado');
+    var datosGuardados = localStorage.getItem("datosUsuario");
+    var UsuarioReserva = JSON.parse(datosGuardados);
 
     useEffect(() => {
         const fetchLibroDetails = async () => {
@@ -42,34 +44,43 @@ const LibroDialog = ({ show, handleClose, selectedLibroId }) => {
 
     // para reservas de libro
     const handleReservar = async () => {
-        if (libroDetails && reservaEstado) {
-            const data = {
-                id_usuario: localStorage.getItem('datosUsuario').id, // Extraer la id del objeto datosUsuario
-                id_libro: libroDetails.id_libro, // Utilizar libroDetails.id_libro
-                estado: reservaEstado
-            };
+        try {
+            console.log('intento reservar');
+            console.log('libroDetails:', libroDetails);
+            console.log('reservaEstado:', reservaEstado);
+            if (libroDetails && reservaEstado) {
+                console.log('hizo la condicion');
+                const data = {
+                    id_usuario: UsuarioReserva.id , // Extraer la id del objeto datosUsuario
+                    id_libro: libroDetails.id_libro, // Utilizar libroDetails.id_libro
+                    estado: reservaEstado
+                };
+                console.log(data);
 
-            try {
-                const response = await fetch('http://localhost/BiblioG/reservas.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': 'e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a'
-                    },
-                    body: JSON.stringify(data)
-                });
-                const responseData = await response.json(); // Leer el cuerpo solo una vez
-                if (responseData.data && Object.keys(responseData.data).length > 0) {
-                    console.log('Reserva creada:', responseData.data);
-                    alert(`¡Reserva creado exitosamente!`);
-                } else {
-                    console.error('Error al crear la reserva:', response.statusText);
-                    // Manejar mensajes de error específicos
-                    alert(`Error: ${responseData.mensaje}`);
+                try {
+                    const response = await fetch('http://localhost/BiblioG/reservas.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': 'e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a'
+                        },
+                        body: JSON.stringify(data)
+                    });
+                    const responseData = await response.json(); // Leer el cuerpo solo una vez
+                    if (responseData.data && Object.keys(responseData.data).length > 0) {
+                        console.log('Reserva creada:', responseData.data);
+                        alert(`¡Reserva creado exitosamente!`);
+                    } else {
+                        console.error('Error al crear la reserva:', response.statusText);
+                        // Manejar mensajes de error específicos
+                        alert(`Error: ${responseData.mensaje}`);
+                    }
+                } catch (error) {
+                    console.error('Error en la solicitud:', error);
                 }
-            } catch (error) {
-                console.error('Error en la solicitud:', error);
             }
+        } catch (error) {
+            console.error('Error en la solicitud:', error);
         }
     };
 
