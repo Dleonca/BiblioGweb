@@ -56,7 +56,6 @@ const LibroDialog = ({ show, handleClose, selectedLibroId }) => {
                     estado: reservaEstado
                 };
                 console.log(data);
-
                 try {
                     const response = await fetch('http://localhost/BiblioG/reservas.php', {
                         method: 'POST',
