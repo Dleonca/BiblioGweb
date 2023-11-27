@@ -10,8 +10,8 @@ const LoginDialog = ({ show, handleClose }) => {
   const [showPwd, setShowPwd] = useState(false)
 
   const [usuario, setUsuario] = useState({
-    correo: '',
-    clave: '',
+    correoU: '',
+    claveU: '',
   });
   const CorreoChange = (e) => {
     setUsuario({ ...usuario, correo: e.target.value });
@@ -21,8 +21,8 @@ const LoginDialog = ({ show, handleClose }) => {
   };
   const limpiarCampos = () => {
     setUsuario({
-      correo: '',
-      clave: '',
+      correoU: '',
+      claveU: '',
     });
   };
 
@@ -51,9 +51,12 @@ const LoginDialog = ({ show, handleClose }) => {
       if (responseData.data && Object.keys(responseData.data).length > 0) {
         alert(`¡Usuario ${usuariolog.correo}, Existe!`);
         limpiarCampos();
-        if(usuariolog.rol == 'usuario'){
+        if (usuariolog.rol == 'usuario') {
+          var objetoJSON = JSON.stringify(usuariolog);
+          // Almacenar en localStorage
+          localStorage.setItem("datosUsuario", objetoJSON);
           navigate('HomeUser');
-        }else{
+        } else {
           navigate('Home');
         }
       } else {
@@ -78,12 +81,12 @@ const LoginDialog = ({ show, handleClose }) => {
         <div className="center">
           <Form.Group controlId="formBasicEmail" style={{ width: '100%' }} onSubmit={loguearse} >
             <Form.Label>Correo electrónico</Form.Label>
-            <Form.Control type="email" placeholder="Ingrese su correo electrónico" className="input" style={{ width: '100%' }} name="correo" value={usuario.correo} onChange={CorreoChange} />
+            <Form.Control type="email" placeholder="Ingrese su correo electrónico" className="input" style={{ width: '100%' }} name="correoU" value={usuario.correo} onChange={CorreoChange} />
           </Form.Group>
 
           <Form.Group controlId="formBasicPassword" style={{ width: '100%' }}>
             <Form.Label>Contraseña</Form.Label>
-            <Form.Control type={showPwd ? "text" : "password"} placeholder="Contraseña" className="input" style={{ width: '100%' }} name="clave" value={usuario.clave} onChange={ClaveChange} />
+            <Form.Control type={showPwd ? "text" : "password"} placeholder="Contraseña" className="input" style={{ width: '100%' }} name="claveU" value={usuario.clave} onChange={ClaveChange} />
             <div className="position-absolute pointer pwd-icon" onClick={() => setShowPwd(!showPwd)}>
               {showPwd ? <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" height={"1.5rem"}>
                 <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" />

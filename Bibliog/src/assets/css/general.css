@@ -264,3 +264,6 @@
  .pwd-icon:hover {
    filter: brightness(1.2);
  }
+ .react-datepicker-wrapper {
+   width: 32%;
+ }
