@@ -52,7 +52,7 @@ const Catalogo = () => {
         {verlibros.map((libro) => (
           <Card className="tarjeta" key={libro.id_libro}>
             <Card.Title className="cardCT">{libro.titulo}</Card.Title>
-            <Card.Img className="cardCI" variant="top" src={libro.imagen} />
+            <Card.Img className="cardCI" variant="top" src={libro.imagen} alt={libro.titulo} />
             <Button className="cardCB" variant="primary" onClick={() => handleShowLD(libro.id_libro)}>
               Ver más
             </Button>

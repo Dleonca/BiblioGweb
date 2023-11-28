@@ -28,7 +28,7 @@ const CabeceraUser = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="navbarScroll" className="justify-content-end">
           <NavLink to='/HomeUser/Catalogo' className="me-4 irA">Catalogo</NavLink >
-          <NavLink to='/HomeUser/PrestamosUser' className="me-4 irA">Pretamos</NavLink>
+          <NavLink to='/HomeUser/PrestamosUser' className="me-4 irA">Prestamos</NavLink>
           <NavDropdown name="nombre" title={NombreCompleto} id="basic-nav-dropdown" className="me-5 irA">
             <NavDropdown.Item href="#">Cuenta</NavDropdown.Item>
             <NavDropdown.Item href="#" onClick={handleFormSubmit}>

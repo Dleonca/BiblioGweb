@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 
 const PrestamosAdmin = () => {
   const [verReservas, setVerReservas] = useState([]);
+  const [verPrestamos, setVerPrestamos] = useState([]);
 
   useEffect(() => {
     const apiUrl = 'http://localhost/BiblioG/getReservas.php';
@@ -27,6 +28,29 @@ const PrestamosAdmin = () => {
     };
 
     fetchData();
+  }, []);
+  //pretamos
+  useEffect(() => {
+    const apiUrl = 'http://localhost/BiblioG/getPrestamos.php';
+
+    const fetchDataPr = async () => {
+      try {
+        const response = await fetch(apiUrl, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a'
+          }
+        });
+        const data = await response.json();
+        setVerPrestamos(data.data);
+        console.log(verPrestamos)
+      } catch (error) {
+        console.error('Error al obtener datos:', error);
+      }
+    };
+
+    fetchDataPr();
   }, []);
   return (
     <div className="row m-2">
@@ -100,60 +124,25 @@ const PrestamosAdmin = () => {
         <Table responsive className="table-striped table-hover">
           <thead>
             <tr>
-              <th className="titleItems">IDE Libro</th>
-              <th className="titleItems">Titulo</th>
+            <th className="titleItems">Prestamo</th>
+              <th className="titleItems">Libro</th>
               <th className="titleItems">Desde</th>
               <th className="titleItems">Hasta</th>
-              <th className="titleItems">ID Usuario</th>
-              <th className="titleItems"></th>
+              <th className="titleItems">Usuario</th>
+              <th className="titleItems">Estado</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              {Array.from({ length: 4 }).map((_, index) => (
-                <td key={index}>Table cell </td>
-              ))}
-              <td>
-                <Button
-                  variant="primary"
-                  type="submit"
-                  style={{ width: "100%" }}
-                >
-                  Estado
-                </Button>
-              </td>
-            </tr>
-            <tr>
-              <td>2</td>
-              {Array.from({ length: 4 }).map((_, index) => (
-                <td key={index}>Table cell </td>
-              ))}
-              <td>
-                <Button
-                  variant="primary"
-                  type="submit"
-                  style={{ width: "100%" }}
-                >
-                  Estado
-                </Button>
-              </td>
-            </tr>
-            <tr>
-              <td>1</td>
-              {Array.from({ length: 4 }).map((_, index) => (
-                <td key={index}>Table cell </td>
-              ))}
-              <td>
-                <Button
-                  variant="primary"
-                  type="submit"
-                  style={{ width: "100%" }}
-                >
-                  Estado
-                </Button>
-              </td>
-            </tr>
+          {verPrestamos.map((prestamos) => (
+                  <tr >
+                    <td>{prestamos.id_prestamo}</td>
+                    <td>{prestamos.titulo}</td>
+                    <td>{prestamos.desde}</td>
+                    <td>{prestamos.hasta}</td>
+                    <td>{prestamos.nombre}</td>
+                    <td>{prestamos.estado}</td>
+                  </tr>
+                ))}
           </tbody>
         </Table>
       </div>
