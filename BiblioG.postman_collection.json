@@ -1,0 +1,478 @@
+{
+	"info": {
+		"_postman_id": "1993e7e8-e54e-4e20-a085-fb84c0ad8ce4",
+		"name": "BiblioG",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9530624",
+		"_collection_link": "https://universal-station-817876.postman.co/workspace/Pruebas~002548fa-a76a-4759-ad44-ed291242772e/collection/9530624-1993e7e8-e54e-4e20-a085-fb84c0ad8ce4?action=share&source=collection_link&creator=9530624"
+	},
+	"item": [
+		{
+			"name": "Crear usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Nuevo 2\",\r\n    \"apellidos\": \"Usuario\",\r\n    \"correo\": \"nuevo@ejempw2lo.com\",\r\n    \"clave\": \"contrasena123\",\r\n    \"rol\": \"usuario\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/BiblioG/usuarios.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"BiblioG",
+						"usuarios.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUsuario",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/BiblioG/getUsuario.php/26",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"BiblioG",
+						"getUsuario.php",
+						"26"
+					],
+					"query": [
+						{
+							"key": "authorization",
+							"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear libro",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"Título del Libro 2\",\r\n  \"autor\": \"Autor del Libro\",\r\n  \"publicacion\": \"2023-11-20\",\r\n  \"genero\": \"Género del Libro\",\r\n  \"cantidad\": 10,\r\n  \"descripcion\": \"Descripción del Libro\",\r\n  \"imagen\": \"url_de_la_imagen\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/BiblioG/libros.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"BiblioG",
+						"libros.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLibros",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/BiblioG/getLibros.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"BiblioG",
+						"getLibros.php"
+					],
+					"query": [
+						{
+							"key": "authorization",
+							"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Libro",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id_libro\": 1,\r\n  \"titulo\": \"Los juegos del hambre\",\r\n  \"autor\": \"Nuevo autor\",\r\n  \"publicacion\": \"2023-11-20\",\r\n  \"genero\": \"Ciencia Ficción\",\r\n  \"cantidad\": 10,\r\n  \"descripcion\": \"Nueva descripción del libro\",\r\n  \"imagen\": \"nueva_imagen.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/BiblioG/updateLibro.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"BiblioG",
+						"updateLibro.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLibro",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/BiblioG/getLibro.php/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"BiblioG",
+						"getLibro.php",
+						"1"
+					],
+					"query": [
+						{
+							"key": "authorization",
+							"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLibroTitulo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/BiblioG/getLibroTitulo.php?titulo=Los juegos del hambre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"BiblioG",
+						"getLibroTitulo.php"
+					],
+					"query": [
+						{
+							"key": "authorization",
+							"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+							"disabled": true
+						},
+						{
+							"key": "titulo",
+							"value": "Los juegos del hambre"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear reserva",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_usuario\": 1,\r\n    \"id_libro\": 2,\r\n    \"estado\":\"aceptado\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/BiblioG/reservas.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"BiblioG",
+						"reservas.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getReservas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/BiblioG/getReservas.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"BiblioG",
+						"getReservas.php"
+					],
+					"query": [
+						{
+							"key": "authorization",
+							"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getReserva",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/BiblioG/getReserva.php/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"BiblioG",
+						"getReserva.php",
+						"1"
+					],
+					"query": [
+						{
+							"key": "authorization",
+							"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gestionarReserva",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_reserva\": 3,\r\n    \"estado\": \"aceptado\",\r\n    \"desde\": \"2023-12-01\",\r\n    \"hasta\": \"2023-12-15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/BiblioG/gestionarReserva.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"BiblioG",
+						"gestionarReserva.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPrestamos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/BiblioG/getPrestamos.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"BiblioG",
+						"getPrestamos.php"
+					],
+					"query": [
+						{
+							"key": "authorization",
+							"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPrestamo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/BiblioG/getPrestamos.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"BiblioG",
+						"getPrestamos.php"
+					],
+					"query": [
+						{
+							"key": "authorization",
+							"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gestionarPrestamo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "e1f602bf73cc96f53c10bb7f7953a438fb7b3c0a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_prestamo\": 4,\r\n    \"estado\": \"devuelto\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/BiblioG/gestionarPrestamo.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"BiblioG",
+						"gestionarPrestamo.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
